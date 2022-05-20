@@ -1,0 +1,348 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  background-color: #111111;
+}
+
+@media only screen and (max-width: 1300px) {
+  section.index .container .text {
+    margin-left: 0;
+  }
+  section.index .container .text .name, section.index .container .text .profession {
+    font-size: 42px;
+    margin-left: 0%;
+  }
+  section.index .container .text .name::before {
+    content: none;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  section.index .container .text {
+    padding-left: 8%;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  body {
+    background-color: #111111;
+  }
+
+  section.index {
+    background-color: #111111 !important;
+    background: none;
+    margin: 0 auto;
+  }
+  section.index .container {
+    flex-direction: column;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  section.index .container .image {
+    margin: 16px auto 0;
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    background-position: unset;
+    border: 4px solid #252525;
+  }
+  section.index .container .text {
+    padding: 32px 3% 160px;
+    margin: auto;
+    width: 70%;
+    text-align: center;
+  }
+  section.index .container .text .name, section.index .container .text .profession {
+    font-size: 38px;
+    line-height: 48px;
+  }
+
+  .nav {
+    height: 60px;
+    position: fixed;
+    flex-direction: row;
+    top: unset;
+    bottom: 0%;
+    right: unset;
+    margin: auto;
+    width: 100%;
+    background-color: #2B2A2A;
+    align-items: center;
+  }
+  .nav ul {
+    right: 0%;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+  }
+  .nav ul li {
+    width: 45px;
+    height: 45px;
+    background-color: #444;
+  }
+  .nav ul li span {
+    display: none;
+  }
+}
+@media only screen and (max-width: 800px) {
+  section.index .container .text {
+    width: 80%;
+    padding: 32px 0% 160px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.index .container .image {
+    width: 230px;
+    height: 230px;
+  }
+  section.index .container .text {
+    width: 80%;
+    padding: 32px 0% 160px;
+  }
+  section.index .container .text .name, section.index .container .text .profession {
+    font-size: 29px;
+    line-height: 40px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  section.index .container .text {
+    width: 95%;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  section.about-me .container {
+    margin: 0 8%;
+  }
+}
+@media only screen and (max-width: 1250px) {
+  section.about-me {
+    margin-bottom: 10%;
+  }
+  section.about-me .container {
+    margin: 0 6%;
+  }
+  section.about-me .container .list-container ul li span {
+    display: block;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  body {
+    overflow-y: scroll;
+    background-color: #111111;
+  }
+
+  section.about section.about-me .container {
+    margin: 0 6%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  section.about section.about-me .container .left {
+    width: 100%;
+    margin-bottom: 160px;
+  }
+  section.about section.about-me .container .left .list-container {
+    width: 80%;
+    width: 100%;
+  }
+  section.about section.about-me .container .left .list-container ul {
+    margin: 0 0px;
+  }
+  section.about section.about-me .container .left .list-container ul li span {
+    display: unset;
+  }
+  section.about section.about-me .container .right {
+    width: 100%;
+  }
+  section.about section.about-me .container .right .right-up, section.about section.about-me .container .right .right-down {
+    justify-content: space-around;
+  }
+}
+@media only screen and (max-width: 760px) {
+  section.about section.about-me {
+    margin-bottom: 4%;
+  }
+  section.about section.about-me .list-container {
+    padding: 0 !important;
+  }
+  section.about section.skills .skill-set {
+    flex-wrap: wrap;
+  }
+  section.about section.skills .skill-set .skill-container {
+    width: 35%;
+  }
+}
+@media only screen and (max-width: 560px) {
+  section.about section.about-me .title {
+    padding: 40px 12px;
+  }
+  section.about section.about-me .title h1 {
+    text-align: left;
+    font-size: 35px;
+  }
+  section.about section.about-me .title .bg-title {
+    display: none;
+  }
+  section.about section.about-me .image {
+    width: 230px;
+    height: 230px;
+    background-image: url(../images/profile.png);
+    background-size: cover;
+    border-radius: 50%;
+    margin: 16px auto 0;
+    border-radius: 50%;
+    border: 4px solid #252525;
+  }
+  section.about section.about-me .container {
+    margin: 0;
+  }
+  section.about section.about-me .container .left {
+    margin-bottom: 80px;
+  }
+  section.about section.about-me .container .left h1 {
+    font-size: 21px;
+  }
+  section.about section.about-me .container .left .list-container {
+    padding: 0 12px;
+    width: 80%;
+  }
+  section.about section.about-me .container .left .list-container ul li span {
+    display: block;
+  }
+  section.about section.about-me .container .right .right-up div h1, section.about section.about-me .container .right .right-down div h1 {
+    font-size: 40px;
+  }
+  section.about section.about-me .container .right .right-up div h3, section.about section.about-me .container .right .right-down div h3 {
+    padding: 0%;
+  }
+  section.about section.about-me .container .right .right-up div h3::before, section.about section.about-me .container .right .right-down div h3::before {
+    content: none;
+  }
+  section.about section.skills h1 {
+    font-size: 21px;
+    text-align: left;
+    padding-left: 12px;
+    margin-bottom: 28px;
+  }
+  section.about section.skills .skill-set .skill-container .skill {
+    width: 90px;
+    height: 90px;
+    border: 6px solid #ffb400;
+  }
+  section.about section.skills .skill-set .skill-container .skill::before {
+    width: 78px;
+    height: 78px;
+    top: -8px;
+    left: -6px;
+    border: 8px solid #2B2A2A;
+  }
+}
+@media only screen and (max-width: 380px) {
+  section.about section.about-me .container .left .list-container {
+    width: 100%;
+    padding: 0%;
+  }
+  section.about section.about-me .container .right {
+    padding: 12px;
+  }
+  section.about section.skills .heading {
+    margin-bottom: 28px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  section.works .images {
+    margin-bottom: 42px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  section.works .title {
+    padding: 40px 12px 60px;
+  }
+  section.works .title h1 {
+    text-align: left;
+    font-size: 35px;
+  }
+  section.works .title .bg-title {
+    display: none;
+  }
+}
+@media only screen and (max-width: 400px) {
+  section.works .images .image img {
+    width: 320px;
+  }
+  section.works .images .image .overlay {
+    width: 320px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  section.contact .container {
+    flex-direction: column;
+  }
+  section.contact .container .left {
+    width: 100%;
+    margin-bottom: 80px;
+  }
+  section.contact .container .right {
+    width: 100%;
+    margin-bottom: 120px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  section.contact .title {
+    padding: 40px 12px 60px;
+  }
+  section.contact .title h1 {
+    text-align: left;
+    font-size: 35px;
+  }
+  section.contact .title .bg-title {
+    display: none;
+  }
+  section.contact .container .right .form-top {
+    flex-direction: column;
+  }
+  section.contact .container .right input, section.contact .container .right textarea {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  section.team .card-container {
+    margin-bottom: 80px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  section.team .title {
+    padding: 60px 12px 60px;
+  }
+  section.team .title h1 {
+    text-align: left;
+    font-size: 35px;
+  }
+  section.team .title .bg-title {
+    display: none;
+  }
+}
+@media only screen and (max-width: 500px) {
+  section.team {
+    padding-bottom: 80px;
+  }
+  section.team .card-container {
+    margin: 0%;
+  }
+}
+@media only screen and (max-width: 350px) {
+  section.team .card-container .card {
+    width: 300px;
+  }
+  section.team .card-container .card .card-data {
+    top: 16px;
+  }
+}
+/*# sourceMappingURL=responsive-styles.css.map */

@@ -1,0 +1,260 @@
+<%- include('header'); -%>
+
+<div class="cursor-dot-outline"></div>
+<div class="cursor-dot"></div>
+<section class="index">
+
+  <div class="container">
+    <div class="image anim2" style="background-image: url(/images/profile.png)"></div>
+
+    <div class="text ">
+      <h1 class="name anim1">I'm <%= obj.nameShown %> </h1>
+      <h1 class="profession anim1"><%= obj.occupation %> </h1>
+      <p class="anim1">
+       <%= obj.homePara %> 
+      </p>
+      <div class="anim1">
+        <a class="anim1 nav-about" 
+        >More about me
+        <span><i class="fas fa-arrow-right"></i></span>
+      </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ------------------about----------------- -->
+
+<section class="about  ">
+  <section class="about-me ">
+    <div class="title about-anim1">
+      <h1>About <span>Me</span></h1>
+      <span class="bg-title">Resume</span>
+    </div>
+
+    <div class="container">
+      <div class="left">
+        <h1 class="about-anim1">personal infos</h1>
+        <div class="image about-anim1"></div>
+        <div class="list-container">
+          <ul class="about-anim1 ">
+            <li><span class="">First Name: </span><span class="">Amardeep</span></li>
+            <li><span class="">Age: </span><span class="">21 Years</span></li>
+            <li><span class="">Freelance: </span><span class="">Available</span></li>
+            <li><span class="">Phone: </span><span class=""><%= obj.phone %></span></li>
+            <li><span class="">Email: </span><span class=""><%= obj.email%> </span></li>
+          </ul>
+          <ul class="about-anim1 ">
+            <li><span class="">Last Name: </span><span class="">Gujraal.</span></li>
+            <li><span class="">Nationality: </span><span class="">Indian.</span></li>
+            <li><span class="">Address: </span><span class=""><%= obj.address %></span></li>
+            <li><span class="">Languages: </span><span class=""><%= obj.languages %></span></li>
+            <!-- <li><span>Lorem: </span>Lorem, ipsum.</li> -->
+          </ul>
+        </div>
+        <div class="about-anim1">
+          <a href="/downloadCV"
+          >Download CV
+          <span><i class="fa-solid fa-download"></i></span>
+        </a>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="right-up">
+          <div class="about-anim1">
+            <h1><%= obj.yearsOfExp %> +</h1>
+            <h3>Years of <br />Experience.</h3>
+          </div>
+          <div class="about-anim1">
+            <h1><%= obj.projects%> +</h1>
+            <h3>Completed <br />Projects.</h3>
+          </div>
+        </div>
+        <div class="right-down">
+          <div class="about-anim1">
+            <h1><%= obj.customers %>+</h1>
+            <h3>Happy <br />Customers.</h3>
+          </div>
+          <div class="about-anim1">
+            <h1><%= obj.certificates %> +</h1>
+            <h3>certificates <br />won.</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="skills">
+    <h1 class="heading">my skills</h1>
+    <div class="skill-set">
+
+      <% for(i in skills) { %> 
+        <div class="skill-container about-anim2">
+          <div class="skill _<%= skills[i].percentage %>" >
+            <span><%= skills[i].percentage %>%</span>
+          </div>
+          <div class="skill-name"><%= skills[i].name %></div>
+        </div>
+  <% } %> 
+
+    </div>
+  </section>
+</section>
+
+<!-- ------------------works----------------- -->
+
+<section class="works">
+  <div class="title works-anim1">
+    <h1>My<span>Portfolio</span></h1>
+    <span class="bg-title">Works</span>
+  </div>
+
+  <div class="categories works-anim1">
+    <ul>
+      <li class="category-item active all">All</li>
+      <li class="category-item certificates">Certificates</li>
+      <li class="category-item websites">Websites</li>
+      <li class="category-item hobby">Hobby</li>
+      <li class="category-item others">Others</li>
+
+
+    </ul>
+  </div>
+  <div class="img-container ">
+    <div class="images works-anim1">
+      <% for(i in works){ %> 
+      <div class="image work-image " data-type="<%= works[i].type %>">
+        <img 
+          src="./works/<%= works[i].type %>/<%= works[i].filename %>"
+          alt=""
+        />
+        <div class="overlay"><%= works[i].name %></div>
+      </div>
+<% } %> 
+    </div>
+  </div>
+</section>
+
+<!-- ------------------contact----------------- -->
+
+<section class="contact">
+  <div class="title contact-anim1">
+    <h1>Get in <span>Touch</span></h1>
+    <span class="bg-title">Contact</span>
+  </div>
+
+  <div class="container">
+    <div class="left">
+      <h4 class=" contact-anim1">DON'T BE SHY !</h4>
+
+      <p class=" contact-anim1">
+        Feel free to get in touch with me. I am always open to discussing new
+        projects, creative ideas or opportunities to be part of your visions.
+      </p>
+      <div class="box  contact-anim1">
+        <div class="box-left"><i class="fa-solid fa-map"></i></div>
+        <div class="box-right ">
+          <h6>get in touch</h6>
+          <p>Send your message in this form</p>
+        </div>
+      </div>
+      <div class="box  contact-anim1">
+        <div class="box-left"><i class="fa-solid fa-envelope-open"></i></div>
+        <div class="box-right">
+          <h6>mail me</h6>
+          <p><%= obj.email %> </p>
+        </div>
+      </div>
+      <div class="box  contact-anim1">
+        <div class="box-left"><i class="fa-solid fa-square-phone"></i></div>
+        <div class="box-right">
+          <h6>call me</h6>
+          <p><%= obj.phone %> </p>
+        </div>
+      </div>
+      <div class="btns contact-anim1">
+        <a href="mailto:gujraal2006@gmail.com" class="btn"><i class="fa-regular fa-envelope"></i></a>
+        <a href="https://www.instagram.com/amardeep_singh17/" class="btn"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://github.com/amartist17" class="btn"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/amardeep-singh-7b65141a0/" class="btn"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="right ">
+      <form action="/contact" method="post">
+      <div class="form-top">
+        <input type="text" class="contact-anim1" name="senderName" id="" placeholder=" YOUR NAME" />
+        <input type="email" class="contact-anim1" name="senderMail" id="" placeholder="YOUR EMAIL" />
+      </div>
+      <input
+        class="subject-field contact-anim1"
+        class="contact-anim1"
+        type="text"
+        name="subject"
+        id=""
+        placeholder=" YOUR SUBJECT"
+      />
+      <textarea
+        name="msgBody"
+        class="contact-anim1"
+        id=""
+        cols="30"
+        rows="8"
+        placeholder=" YOUR MESSAGE"
+      ></textarea>
+      <button type="submit" class="send-btn contact-anim1" href="#"
+        >Send message
+        <span><i class="fa-solid fa-paper-plane"></i></span>
+    </button>
+    </form>
+    </div>
+  </div>
+</section>
+
+<!-- ------------------team----------------- -->
+
+<section class="team">
+  <div class="title teams-anim1">
+    <h1>My <span>Team</span></h1>
+    <span class="bg-title">All of us</span>
+  </div>
+  <div class="card-container ">
+    <% for(mem in team){ %> 
+    <div class="card teams-anim1">
+      <div
+        class="image"
+        style="background-image: url('/team/background/<%=team[mem].background%>')"
+      >
+        <img
+          src="/team/image/<%= team[mem].image %> "
+          alt=""
+        />
+      </div>
+      <div class="card-data">
+        <h3><%= team[mem].name %> </h3>
+        <h5><%= team[mem].job %> .</h5>
+        <a target="_blank" href="<%= team[mem].link %> "
+          >lets go<span><i class="fa-solid fa-paper-plane"></i></span
+        ></a>
+      </div>
+    </div>
+    <% } %> 
+
+  </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+<!-- gsap -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- jquery -->
+<script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"
+></script>
+<script src="./js/index.js"></script>
+<script src="./js/works.js"></script>
+<script src="./js/cursor.js"></script>
+
+</body>
+</html>
