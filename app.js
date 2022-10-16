@@ -44,9 +44,9 @@ app.get("/", async (req, res) => {
 app.post("/contact", async (req, res) => {
   try {
     let transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 587,
-      secure: false,
+      host: "mail.amardeepsingh.tech",
+      port: 465,
+      secure: true,
       auth: {
         user: process.env.EMAILID, // generated ethereal user
         pass: process.env.EMAILPASSWORD, // generated ethereal password
@@ -54,7 +54,7 @@ app.post("/contact", async (req, res) => {
     });
     // send mail with defined transport object
     let info = await transporter.sendMail({
-      from: req.body.senderName + "<req.body.senderMail>", // sender address
+      from: process.env.EMAILID, // sender address
       to: "gujraal2006@gmail.com", // list of receivers
       subject: req.body.subject, // Subject line
       text: "By: " + req.body.senderMail + "\n" + req.body.msgBody + "", // plain text body
@@ -89,6 +89,7 @@ app.post("/login", async (req, res) => {
       }
     }
   );
+  // if(req.body.password == )
 });
 app.get("/dashboard", async (req, res) => {
   try {
