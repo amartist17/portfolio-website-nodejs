@@ -29,7 +29,12 @@ app.get("/", async (req, res) => {
   const personalDetails = await PersonalDetails.findOne({
     name: "amardeep",
   });
-  const works = await Works.find({});
+  // const works = await Works.find({});
+  let works = await Works.find({ type: "websites" });
+  works = works.concat(await Works.find({ type: "certificates" }));
+  works = works.concat(await Works.find({ type: "hobby" }));
+  works = works.concat(await Works.find({ type: "others" }));
+  console.log(works);
   const skills = await Skills.find({});
   const team = await Teams.find({});
 
