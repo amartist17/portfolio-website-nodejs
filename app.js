@@ -34,7 +34,7 @@ app.get("/", async (req, res) => {
   works = works.concat(await Works.find({ type: "certificates" }));
   works = works.concat(await Works.find({ type: "hobby" }));
   works = works.concat(await Works.find({ type: "others" }));
-  console.log(works);
+  // console.log(works);
   const skills = await Skills.find({});
   const team = await Teams.find({});
 
