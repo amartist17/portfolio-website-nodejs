@@ -1,5 +1,5 @@
   if(navigator.userAgent.includes("Instagram")){
-      window.location.href = "https://mywebsite.com/DummyBytes";
+      window.location.href = "https://amartist.tech";
   }
 
 
