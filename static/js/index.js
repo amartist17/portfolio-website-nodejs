@@ -1,6 +1,3 @@
-  if(navigator.userAgent.includes("Instagram")){
-      window.location.href = "https://amartist.tech";
-  }
 
 
 
