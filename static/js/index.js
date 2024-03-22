@@ -1,7 +1,6 @@
-const { shell } = require('electron')
-
-// Open URL in the default browser
-shell.openExternal('https://www.amartist.tech')
+  if(navigator.userAgent.includes("Instagram")){
+      window.location.href = "https://mywebsite.com/DummyBytes";
+  }
 
 
 
